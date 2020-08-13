@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <title>social engineering</title>
+</head>
+
+<body>
+    <header>
+        <div class="Name">ADITYA DUDEJA</div>
+        <nav>
+            <ul class="nav__links">
+                <li id="nav-1" class="nav"><a href="#">HOME</a></li>
+                <li id="nav-2" class="nav"><a href="#">ABOUT</a></li>
+                <li id="nav-3" class="nav"><a href="https://github.com/AlanAditya/Social-Engineering-">SOURCE CODE</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="cta"><button onclick='alert("button in progress")'>Contacts</button></a>
+    </header>
+    <marquee scrollamount="12" class="mar">Stay Positive Be Negetive Stay Positive Be Negetive Stay Positive Be Negetive
+    </marquee>
+
+    <div class="main"></div>
+</body>
+<script>
+    const root = document.querySelector(".main");
+const home = document.getElementById("nav-1");
+const about = document.getElementById("nav-2");
+const source = document.getElementById("nav-3");
+
+function home_div(){
+    var upoints = document.createElement("ul")
+    var points = document.createElement("li")
+    var points2 = document.createElement("li")
+    var home_div = document.createElement("div");
+    var home_text = document.createElement("div");
+    var home_text2 = document.createElement("div");
+    const home_img = document.createElement("img");
+    const home_img2 = document.createElement("img");
+    home_img.src =
+        "https://media.threatpost.com/wp-content/uploads/sites/103/2019/09/18142900/social_engineering-1.jpg";
+    home_img2.src =
+        "https://cpb-us-e1.wpmucdn.com/blogs.gwu.edu/dist/d/1054/files/2019/06/image-2.png";
+    home_text.setAttribute("class", "home_text");
+    home_img.setAttribute("class", "home_img");
+    home_img2.setAttribute("class", "home_img2");
+    home_text2.setAttribute("class", "home_text2");
+    home_div.setAttribute("class", "home_div");
+    upoints.setAttribute("class", "list")
+    points.textContent = "never share your company information or account details with anyone"
+    points2.textContent = "Install an antivirus software or a security suite — such as Norton Security — and keep that software up to date"
+    home_text.textContent =
+        "Social engineering is the art of manipulating people so they give up confidential information. The types of information these criminals are seeking can vary, but when individuals are targeted the criminals are usually trying to trick you into giving them your passwords or bank information, or access your computer to secretly install malicious software–that will give them access to your passwords and bank information as well as giving them control over your computer. Criminals use social engineering tactics because it is usually easier to exploit your natural inclination to trust than it is to discover ways to hack your software.  For example, it is much easier to fool someone into giving you their password than it is for you to try hacking their password (unless the password is really weak).";
+    home_text2.textContent =
+        "Security is all about knowing who and what to trust. It is important to know when and when not to take a person at their word and when the person you are communicating with is who they say they are. The same is true of online interactions and website usage: when do you trust that the website you are using is legitimate or is safe to provide your information? Ask any security professional and they will tell you that the weakest link in the security chain is the human who accepts a person or scenario at face value. It doesn’t matter how many locks and deadbolts are on your doors and windows, or if have guard dogs, alarm systems, floodlights, fences with barbed wire, and armed security personnel; if you trust the person at the gate who says he is the pizza delivery guy and you let him in without first checking to see if he is legitimate you are completely exposed to whatever risk he represents.";
+    while (root.firstChild) {
+        root.removeChild(root.lastChild);
+    }
+    root.appendChild(upoints);
+    upoints.appendChild(points);
+    upoints.appendChild(points2);
+    root.appendChild(home_div);
+
+
+    home_div.appendChild(home_img);
+    home_div.appendChild(home_text);
+    home_div.appendChild(home_img2);
+    home_div.appendChild(home_text2);
+}
+document.onload=home_div();
+home.addEventListener("click", () => {
+    home_div()
+});
+about.addEventListener("click", () => {
+    var about_div = document.createElement("div");
+    var about_div_text = document.createElement("div")
+    var about_div_img = document.createElement("img")
+    about_div.setAttribute("class", "about_div");
+    about_div_text.setAttribute("class", "about-text")
+    about_div_img.setAttribute("class", "about-img")
+    while (root.firstChild) {
+        root.removeChild(root.lastChild); 
+    }
+    about_div_text.textContent = "This page is created by Aditya Dudeja of Class 7 Titan"
+    about_div_img.src = "https://img-a.udemycdn.com/course/750x422/2488654_e156_3.jpg"
+    root.appendChild(about_div);
+    about_div.appendChild(about_div_img)
+    about_div.appendChild(about_div_text)
+});
+source.addEventListener("click", () => {
+    var source_div = document.createElement("div");
+    const source_1 = document.createElement("code");
+    const source_2 = document.createElement("code");
+    const source_3 = document.createElement("code");
+    source_div.setAttribute("class", "source_div");
+    source_1.setAttribute("class", "source sr1");
+    source_2.setAttribute("class", "source sr2");
+    source_3.setAttribute("class", "source sr3");
+    while (root.firstChild) {
+        root.removeChild(root.lastChild);
+    }
+    root.appendChild(source_div);
+    source_div.appendChild(source_1);
+    source_div.appendChild(source_2);
+    source_div.appendChild(source_3);
+});
+</script>
+<Style>
+    @import url("https://fonts.googleapis.com/css?family=Montserrat:500&display=swap");
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #24252a;
+}
+
+li,
+a,
+button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 10%;
+}
+.Name {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    cursor: pointer;
+}
+.nav__links {
+    list-style: none;
+}
+.nav__links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+    color: #0088a9;
+}
+button {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+button:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+}
+.home_div {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: space-evenly;
+}
+.home_img {
+    grid-column: 1/2;
+    height: 200px;
+}
+.home_text2 {
+    grid-column: 1/5;
+    grid-row: 2/3;
+    padding: 10px;
+    margin: auto;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    margin-right: auto;
+}
+.home_img2 {
+    grid-column: 5/6;
+    height: 200px;
+    justify-self: end;
+    width: 330px;
+}
+.home_text {
+    grid-column: 2/6;
+    padding: 10px;
+    margin: auto;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+}
+.source_div {
+    display: flex;
+    
+}
+.mar {
+    color: #edf0f1;
+}
+
+.list li{
+    margin: 20px 30px;
+}
+.Preventions {
+    color: #edf0f1;
+
+}
+header{
+    margin: 0px;
+    padding-bottom: 4px;
+}
+.about_div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+}
+.about-text {
+    color: #edf0f1;
+    padding: 20px;
+    font-size: 30px;
+}
+</Style>
+</html>
